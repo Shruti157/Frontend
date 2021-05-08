@@ -20,7 +20,7 @@ import { RegistrationComponent } from './registration/registration.component';
     AppComponent,
     HomeComponent,
     LoginAppComponent,
-    RegistrationComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { RegistrationComponent } from './registration/registration.component';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatSelectModule,
+    MatSelectModule
     //AddEventModule
   ],
   providers: [],

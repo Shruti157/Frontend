@@ -16,6 +16,7 @@ auth : RegistrationModel;
   ngOnInit(): void {
 
   }
+  
    validate(){
    console.log(this.auth.Username + " = " + this.auth.phonenum + " = " + this.auth.EmailId+ " = " + 
    this.auth.State + " = " + this.auth.Password);
