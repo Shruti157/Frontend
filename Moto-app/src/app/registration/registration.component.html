@@ -1,0 +1,65 @@
+<form (ngSubmit)="Validate()" logfrm=ngForm>
+    <table class="table table-dark">
+        <tr>
+            <td>Username</td>
+            <td><input name="Username" #username=ngModel [(ngModel)]="auth.Username"
+                required pattern="[a-zA-Z]{3,}">
+                <span *ngIf="Username.dirty && Username.invalid" class="alert alert-danger">
+                    Username is empty or invalid
+                </span>
+            </td>
+        </tr>
+      <tr> 
+        <td>Phone Number: </td>
+        <td><input name="Phone Number" #phonenum=ngModel [(ngModel)]="auth.Phonenum"
+             required pattern="[0,9]{10,}">
+            <span *ngIf="Phonenum.dirty &&Phonenum.invalid" class="alert alert-danger">
+                Field is empty or invalid.
+            </span>
+        </td>
+      </tr>
+      <tr>
+       <td>Create Password: </td>
+       <td><input type="Password" name="Password"  #Password=ngModel [(ngModel)]="auth.Password">
+        <span *ngIf="Password.dirty && Password.invalid" class="alert alert-danger">
+            Password is empty or invalid
+        </span>
+    </td>
+      </tr>
+      <tr>
+     <td>Re-Enter the Password: </td>
+     <td><input name="Re-Enter the Password"  #Password=ngModel [(ngModel)]="Password.username"
+         required pattern="[A-Za-z0-9]{7,}">
+        <span *ngIf="Password.dirty && Password.invalid" class="alert alert-danger">
+            Password is empty or invalid
+        </span>
+    </td>
+      </tr>
+       <tr>
+      <td>EmailId: </td>
+      <td><input name="Emailid"  #Email-ID=ngModel [(ngModel)]="auth.EmailId"
+        required pattern="[a-z@gmail.com]">
+        <span *ngIf="Email-Id.dirty && Email-Id.invalid" class="alert alert-danger">
+            Email-Id is empty or invalid
+        </span>
+    </td>
+      </tr>
+     <tr>
+     <td>State: </td>
+     <td><input name="Enter your State"  #state=ngModel [(ngModel)]="auth.State"
+        required pattern="[A-Z a-z]{3,}">
+        <span *ngIf="State.dirty && State.invalid" class="alert alert-danger">
+            State is empty or invalid
+        </span>
+    </td>
+      </tr>
+      <tr>
+     <td>City: </td>
+     <td><input name="your City"></td>
+      </tr>
+    
+      <tr><th colspan="2">
+     <button class="btn btn-success" type="submit" [disabled]=!logfrm.valid> Register</button>
+     </th></tr>
+    </table>
+</form>
